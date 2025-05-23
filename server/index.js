@@ -138,7 +138,6 @@ io.on('connection', (socket) => {
     currentTurns[roomId] = nextId;
     io.to(roomId).emit('turn_update', nextId);
   });
-C:\Users\SERY\Desktop\мухан\monopoly\client\src\index.js
   socket.on('disconnect', () => {
     for (const roomId in rooms) {
       const wasCurrent = currentTurns[roomId] === socket.id;
